@@ -40,54 +40,84 @@ export interface Role {
 
 export const profile = {
   name: "Ishak",
-  role: "Mobile application developer",
-  location: "Indonesia",
-  email: "iboy_ishak@yahoo.com",
+  role: "Lead mobile engineer",
+  location: "Pontianak, Indonesia",
+  email: "ishakiboy@gmail.com",
   phone: "+62 878 8935 6310",
   phoneHref: "tel:+6287889356310",
   linkedin: "https://www.linkedin.com/in/iboy-ishak-4b81174b/",
+  github: "https://github.com/iboy15",
   portrait: "media/portrait.jpg",
 };
 
 export const roles: Role[] = [
   {
-    period: "From Aug 2016",
+    period: "Jan 2022 – Sep 2026",
+    title: "Lead mobile app developer",
+    place: "LX Group / INCYT · Sydney, remote",
+    detail:
+      "Led the INCYT iOS and Android app, from architecture and native integrations through App Store and Google Play releases and production support.",
+  },
+  {
+    period: "Dec 2021 – Dec 2022",
+    title: "React Native developer",
+    place: "Go Buddy (GLINTS) · Hong Kong / Malaysia, remote",
+    detail:
+      "Built YOYO Kitchen, a membership and shopping app for iOS and Android.",
+  },
+  {
+    period: "Aug 2021 – Feb 2022",
+    title: "React Native developer",
+    place: "coinpass Limited · United Kingdom, remote",
+    detail:
+      "Shipped buy, sell, and trade features for the coinpass iOS and Android app.",
+  },
+  {
+    period: "Aug 2020 – Aug 2021",
+    title: "React Native developer",
+    place: "Epitome Global · Singapore, remote",
+    detail:
+      "Built LEARN, a Singapore government app for workplace learning, on iOS and Android.",
+  },
+  {
+    period: "Sep 2018 – Aug 2020",
+    title: "React Native developer",
+    place: "Armillary / Skilledd.com · Singapore, remote",
+    detail:
+      "Maintained React Native products including TigTac, Financial Fortress, and Salesbuilder.",
+  },
+  {
+    period: "Sep 2017 – Sep 2018",
+    title: "React Native developer",
+    place: "PT Lawencon International · Indonesia",
+    detail:
+      "Contributed to BRImo, BRITALK, and BRISMART for Bank BRI on Android and iOS.",
+  },
+  {
+    period: "Aug 2016 – Nov 2017",
     title: "Mobile apps programmer",
-    place: "Ciputra Group · Citra Raya, Cikupa, Tangerang",
+    place: "Ciputra Group · Indonesia",
     detail:
-      "Android and iOS apps for property sales: product catalogues, customer records, and project reporting.",
+      "Built mobile and internal business apps with React Native, Delphi, PHP, and SQL.",
   },
   {
-    period: "2018",
-    title: "Freelance",
-    place: "E-Magazine for Jamkrindo · Indonesia",
-    detail: "A mobile magazine with monthly issues, video, quizzes, and company news.",
-  },
-  {
-    period: "2017",
-    title: "Freelance",
-    place: "PeGe Grosir · Indonesia",
-    detail:
-      "Wholesale shopping app with sign-in, cart, checkout, and account balance.",
-  },
-  {
-    period: "Jan–Aug 2016",
+    period: "Jan 2016 – Aug 2016",
     title: "Mobile app programmer",
-    place: "Cerberus Yumana Karya · Pondok Indah, Jakarta Selatan",
+    place: "Cerberus Yumana Karya · Indonesia",
     detail:
-      "Android, iOS, and web apps, including a 360° virtual tour viewer built with Unity.",
+      "Built Android, iOS, and web apps with Delphi, Unity, C#, and PHP.",
   },
 ];
 
 export const education = [
   {
     period: "2013–2015",
-    title: "Diploma IV",
+    title: "Diploma IV, Information Technology",
     place: "Institut Teknologi Bandung",
   },
   {
     period: "2009–2012",
-    title: "Diploma III",
+    title: "Diploma III, Information Technology",
     place: "Politeknik Negeri Pontianak",
   },
   {
@@ -99,15 +129,24 @@ export const education = [
 
 export const skills = [
   "React Native",
+  "TypeScript",
+  "JavaScript",
   "React",
   "Redux",
-  "JavaScript",
-  "PHP",
-  "SQL",
-  "JSON APIs",
-  "Android",
+  "Hermes",
   "iOS",
-  "Unity",
+  "Android",
+  "GraphQL",
+  "tRPC",
+  "Node.js",
+  "REST",
+  "Firebase",
+  "AWS Amplify",
+  "Mapbox",
+  "Stripe",
+  "CodePush",
+  "Codemagic",
+  "New Relic",
 ];
 
 export const projects: Project[] = [
@@ -117,15 +156,15 @@ export const projects: Project[] = [
     category: "IoT",
     summary: "Watch sensors, vehicles, and field conditions from the phone.",
     story:
-      "INCYT is the mobile app for LX devices. It configures sensors, trackers, and controllers, then puts live readings on a map and in a dashboard. Operators can follow an asset, open an alarm, and see a spray or risk advisory without walking the site.",
+      "INCYT is the mobile app for LX devices. It configures sensors, trackers, and controllers, then puts live readings on a map and in a dashboard. I led the React Native app on iOS and Android: architecture, native integrations, App Store and Google Play releases, CodePush for eligible fixes, and production investigation.",
     highlights: [
       "Map of devices, paths, and GPS locations",
       "Dashboards for temperature, risk, and spray advice",
-      "Alarms when a reading needs attention",
-      "Works with the wider INCYT web tools",
+      "Releases on the App Store, Google Play, and CodePush",
+      "Mapbox, push, BLE, Stripe, and React Native upgrades through 0.83",
     ],
     platforms: ["Android", "iOS"],
-    tools: ["React Native"],
+    tools: ["React Native", "TypeScript", "Mapbox"],
     image: "media/incyt.jpg",
     imageAlt: "Latest INCYT App Store screens: a field map and a spray advisory dashboard",
     links: [
@@ -201,7 +240,7 @@ export const projects: Project[] = [
     category: "Estate",
     summary: "Faraidh calculations, wills, and family documents in one place.",
     story:
-      "WarisAI helps a Muslim family prepare inheritance with more order. It calculates faraidh scenarios, keeps a checklist of what is still missing, stores important documents, and includes a sealed note plus Hajj preparation material.",
+      "WarisAI helps a Muslim family prepare inheritance with more order. It calculates faraidh scenarios, keeps a checklist of what is still missing, stores important documents, and includes a sealed note plus Hajj preparation material. I contributed to production features and the iOS and Android release.",
     highlights: [
       "Faraidh calculator and saved scenarios",
       "Will notes and a document vault",
@@ -209,7 +248,7 @@ export const projects: Project[] = [
       "Family checklist and Hajj preparation",
     ],
     platforms: ["Android", "iOS"],
-    tools: ["React", "TypeScript"],
+    tools: ["React", "TypeScript", "Capacitor", "Supabase"],
     image: "media/warisai.jpg",
     imageAlt: "WarisAI home and estate-preparation screens from the App Store",
     links: [
@@ -232,7 +271,7 @@ export const projects: Project[] = [
       "SIGITA JAS BERKERAH is the digital waste-transport service for Pontianak. Residents request a pickup, choose a depot on the map, and follow the order until it is finished. Drivers update the trip as they collect and deliver.",
     highlights: [
       "Request a household waste pickup",
-      "Choose the destination depot on a map",
+      "Tracking, chat, and photo capture on a trip",
       "Delivery history with status",
       "Separate views for customers and drivers",
     ],
@@ -253,15 +292,15 @@ export const projects: Project[] = [
     category: "Survey",
     summary: "A landscape iPad survey for feedback at the counter.",
     story:
-      "CXInsight runs on an iPad in landscape. A visitor starts from a branded welcome screen. Staff sign in, then the questionnaire collects stars, emoji, thumbs, and picture choices, and closes on a thank-you screen.",
+      "CXInsight runs on an iPad in landscape. A visitor starts from a branded welcome screen. Staff sign in, then the questionnaire collects stars, emoji, thumbs, and picture choices, and closes on a thank-you screen. The kiosk talks to WordPress over REST, can bind a device, keep working offline, and ships with EAS.",
     highlights: [
       "Branded welcome with a one-tap start",
       "Staff login before the questionnaire",
       "Stars, emoji, thumbs, and image choices",
-      "Progress through the questions, then a thank-you",
+      "Offline use, device binding, and EAS delivery",
     ],
     platforms: ["iOS", "Android"],
-    tools: ["React Native", "Expo"],
+    tools: ["React Native", "Expo", "EAS"],
     image: "media/cxinsight.jpg",
     imageAlt: "CXInsight welcome screen and an emoji rating question on iPad",
     links: [],
@@ -299,7 +338,7 @@ export const projects: Project[] = [
     category: "Food",
     summary: "Member shop for 御壹工房, with points and member prices.",
     story:
-      "YOYO Kitchen’s membership app is where members buy exclusive products, collect points, join activities, and talk with the shop in a group.",
+      "YOYO Kitchen is the membership and shopping app I built with Go Buddy. Members buy exclusive products, collect points, join activities, and talk with the shop in a group.",
     highlights: [
       "Member-only products and offers",
       "Points and discounts",

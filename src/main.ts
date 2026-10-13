@@ -73,7 +73,7 @@ function home(): string {
           <p class="eyebrow">${esc(profile.role)}</p>
           <h1>Apps that make the work easier.</h1>
           <p class="lede">
-            I build Android and iOS products for field teams, shops, rewards, estate planning, and city services. Based in ${esc(profile.location)}.
+            I lead React Native delivery for iOS and Android, from architecture and store releases through production support. Based in ${esc(profile.location)}.
           </p>
           <div class="hero-actions">
             <a class="button" href="#work">Selected work</a>
@@ -111,9 +111,9 @@ function home(): string {
         <div class="split">
           <div class="prose">
             <p>
-              I like building mobile apps, and I like learning the next tool that makes one possible. The part I enjoy is an application that makes someone’s task easier. If it can be built, it is worth trying.
+              I have spent more than ten years in software, and eight of those in React Native. The apps have been for teams in Australia, Singapore, the United Kingdom, Hong Kong, Malaysia, and Indonesia. I stay on the work itself: TypeScript, native integrations, App Store and Google Play releases, CI, and production support.
             </p>
-            <p>Indonesian and English.</p>
+            <p>Indonesian, native. English, professional. Open to remote work in Australia and APAC.</p>
             <h3>Education</h3>
             <ul class="timeline">
               ${education
@@ -160,6 +160,7 @@ function home(): string {
             <li><a href="mailto:${esc(profile.email)}">${esc(profile.email)}</a></li>
             <li><a href="${esc(profile.phoneHref)}">${esc(profile.phone)}</a></li>
             <li><a href="${esc(profile.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="${esc(profile.github)}" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           </ul>
         </div>
       </section>
@@ -211,7 +212,7 @@ function render(scroll: boolean): void {
   const project = projectFromHash();
   document.title = project
     ? `${project.name} — Ishak`
-    : "Ishak — Mobile application developer";
+    : `Ishak — ${profile.role}`;
   root().innerHTML = project ? caseStudy(project) : home();
   setCurrentNav();
   if (!scroll) return;
