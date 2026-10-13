@@ -73,7 +73,7 @@ function home(): string {
           <p class="eyebrow">${esc(profile.role)}</p>
           <h1>Apps that make the work easier.</h1>
           <p class="lede">
-            I build Android and iOS products, from field sensors and crypto trading to property sales, membership shops, and community fundraising. Based in ${esc(profile.location)}.
+            I build Android and iOS products for field teams, shops, rewards, estate planning, and city services. Based in ${esc(profile.location)}.
           </p>
           <div class="hero-actions">
             <a class="button" href="#work">Selected work</a>
@@ -111,7 +111,7 @@ function home(): string {
         <div class="split">
           <div class="prose">
             <p>
-              I have a passion for mobile programming and for learning the tools that come next. The part I enjoy is an application that makes someone’s task easier. If it can be built, it is worth trying.
+              I like building mobile apps, and I like learning the next tool that makes one possible. The part I enjoy is an application that makes someone’s task easier. If it can be built, it is worth trying.
             </p>
             <p>Indonesian and English.</p>
             <h3>Education</h3>

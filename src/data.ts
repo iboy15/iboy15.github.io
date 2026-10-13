@@ -1,4 +1,14 @@
-export type Category = "IoT" | "Finance" | "Food" | "Property" | "Community" | "Experiment";
+export type Category =
+  | "IoT"
+  | "Retail"
+  | "Rewards"
+  | "Estate"
+  | "Community"
+  | "Survey"
+  | "Finance"
+  | "Food"
+  | "Property"
+  | "Experiment";
 
 export interface StoreLink {
   label: string;
@@ -105,19 +115,19 @@ export const projects: Project[] = [
     slug: "incyt",
     name: "INCYT by LX",
     category: "IoT",
-    summary: "Field monitoring for sensors, trackers, and controllers.",
+    summary: "Watch sensors, vehicles, and field conditions from the phone.",
     story:
-      "INCYT lets an operator watch the parts of a site that matter, whether the operation is large or small. The app configures LX devices and sends readings to a phone, tablet, or computer, with alerts when something needs attention.",
+      "INCYT is the mobile app for LX devices. It configures sensors, trackers, and controllers, then puts live readings on a map and in a dashboard. Operators can follow an asset, open an alarm, and see a spray or risk advisory without walking the site.",
     highlights: [
-      "Activate devices and check status, battery, and data",
-      "See devices and live readings on a map and in AR",
-      "Filter detail in Cockpit and Dashboard",
-      "Receive alerts and notifications",
+      "Map of devices, paths, and GPS locations",
+      "Dashboards for temperature, risk, and spray advice",
+      "Alarms when a reading needs attention",
+      "Works with the wider INCYT web tools",
     ],
     platforms: ["Android", "iOS"],
     tools: ["React Native"],
     image: "media/incyt.jpg",
-    imageAlt: "INCYT phone screens showing a sensor map and a temperature reading",
+    imageAlt: "Latest INCYT App Store screens: a field map and a spray advisory dashboard",
     links: [
       {
         label: "Google Play",
@@ -130,12 +140,139 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "carlo-rino",
+    name: "Carlo Rino",
+    category: "Retail",
+    summary: "The official shop for Carlo Rino bags, shoes, and accessories.",
+    story:
+      "Carlo Rino is the brand’s shop app. Explore opens on a campaign and a flash sale, with search just under the hero. A member can move through collections and popular items, save a wishlist, and check out with an offer or a packaging note.",
+    highlights: [
+      "Explore home with campaigns and search",
+      "Collections, new arrivals, and popular items",
+      "Wishlist, cart, and checkout",
+      "Blog, news, and contact",
+    ],
+    platforms: ["Android", "iOS"],
+    tools: ["React Native", "Expo"],
+    image: "media/carlo-rino.jpg",
+    imageAlt: "Carlo Rino Explore home, with a Labour Day campaign and the New Collections carousel",
+    links: [
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=net.carlorino.carlorino",
+      },
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/us/app/carlo-rino/id6477374256",
+      },
+    ],
+  },
+  {
+    slug: "mj-rewards",
+    name: "MJ Rewards",
+    category: "Rewards",
+    summary: "Points, cashback, and lucky draws for Mustafa Centre.",
+    story:
+      "MJ Rewards is the Mustafa Rewards app for Mustafa Centre and Mustafa Jewellery in Singapore. A member shows a digital card at checkout, earns points, redeems them, and can pick up a spin or lucky-draw entry.",
+    highlights: [
+      "Points balance and cashback value",
+      "Redeem rewards in the app",
+      "Purchase history",
+      "Spin wheel and lucky draw",
+    ],
+    platforms: ["Android", "iOS"],
+    tools: ["React Native"],
+    image: "media/mj-rewards.jpg",
+    imageAlt: "MJ Rewards lucky spin and the screen for redeeming points as a voucher",
+    links: [
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.stallions2.mustafarewardsapp.android",
+      },
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/sg/app/mustafa-rewards/id6755588828",
+      },
+    ],
+  },
+  {
+    slug: "warisai",
+    name: "WarisAI",
+    category: "Estate",
+    summary: "Faraidh calculations, wills, and family documents in one place.",
+    story:
+      "WarisAI helps a Muslim family prepare inheritance with more order. It calculates faraidh scenarios, keeps a checklist of what is still missing, stores important documents, and includes a sealed note plus Hajj preparation material.",
+    highlights: [
+      "Faraidh calculator and saved scenarios",
+      "Will notes and a document vault",
+      "Sealed envelope for a message to open later",
+      "Family checklist and Hajj preparation",
+    ],
+    platforms: ["Android", "iOS"],
+    tools: ["React", "TypeScript"],
+    image: "media/warisai.jpg",
+    imageAlt: "WarisAI home and estate-preparation screens from the App Store",
+    links: [
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.faraidh.warisai",
+      },
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/id/app/warisai/id6761743706",
+      },
+    ],
+  },
+  {
+    slug: "sigita",
+    name: "SIGITA",
+    category: "Community",
+    summary: "Waste pickup for Pontianak, from order to depot.",
+    story:
+      "SIGITA JAS BERKERAH is the digital waste-transport service for Pontianak. Residents request a pickup, choose a depot on the map, and follow the order until it is finished. Drivers update the trip as they collect and deliver.",
+    highlights: [
+      "Request a household waste pickup",
+      "Choose the destination depot on a map",
+      "Delivery history with status",
+      "Separate views for customers and drivers",
+    ],
+    platforms: ["Android", "iOS"],
+    tools: ["React Native", "Expo"],
+    image: "media/sigita.jpg",
+    imageAlt: "SIGITA screens for choosing a depot and reviewing delivery history",
+    links: [
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.dlh.sigita",
+      },
+    ],
+  },
+  {
+    slug: "cxinsight",
+    name: "CXInsight",
+    category: "Survey",
+    summary: "A landscape iPad survey for feedback at the counter.",
+    story:
+      "CXInsight runs on an iPad in landscape. A visitor starts from a branded welcome screen. Staff sign in, then the questionnaire collects stars, emoji, thumbs, and picture choices, and closes on a thank-you screen.",
+    highlights: [
+      "Branded welcome with a one-tap start",
+      "Staff login before the questionnaire",
+      "Stars, emoji, thumbs, and image choices",
+      "Progress through the questions, then a thank-you",
+    ],
+    platforms: ["iOS", "Android"],
+    tools: ["React Native", "Expo"],
+    image: "media/cxinsight.jpg",
+    imageAlt: "CXInsight welcome screen and an emoji rating question on iPad",
+    links: [],
+  },
+  {
     slug: "coinpass",
     name: "Coinpass",
     category: "Finance",
-    summary: "Buy, sell, and trade crypto on a UK exchange.",
+    summary: "Buy, sell, and withdraw crypto on a UK exchange.",
     story:
-      "Coinpass is a mobile app for a UK crypto exchange registered with the Financial Conduct Authority. People deposit from a bank, buy an asset, sell it, and withdraw pounds without a complicated trading screen.",
+      "Coinpass is the mobile app for a UK crypto exchange registered with the Financial Conduct Authority. Someone can deposit from a bank, buy or sell an asset, and withdraw pounds from a short set of screens.",
     highlights: [
       "Buy, sell, and trade from a simple home screen",
       "Deposit from a bank and withdraw to GBP",
@@ -160,9 +297,9 @@ export const projects: Project[] = [
     slug: "yoyo-kitchen",
     name: "YOYO Kitchen",
     category: "Food",
-    summary: "Membership shop for 御壹工房, with points and member prices.",
+    summary: "Member shop for 御壹工房, with points and member prices.",
     story:
-      "This is the membership platform for YOYO Kitchen. Members buy products at member prices, collect points, join activities, and talk in group sharing.",
+      "YOYO Kitchen’s membership app is where members buy exclusive products, collect points, join activities, and talk with the shop in a group.",
     highlights: [
       "Member-only products and offers",
       "Points and discounts",
@@ -178,16 +315,15 @@ export const projects: Project[] = [
         href: "https://play.google.com/store/apps/details?id=com.yoyokitchen.marketplace",
       },
     ],
-    note: "The old site linked an iTunes Connect page rather than the App Store app, so only the Android listing is included here.",
   },
   {
     slug: "financial-fortress",
     name: "Financial Fortress",
     category: "Finance",
-    summary: "A place to manage an insurance and investment portfolio.",
+    summary: "Insurance and investment policies, gathered in one portfolio.",
     story:
-      "Financial Fortress helps a client see an insurance and investment portfolio and get help with it. The Android package is published as Virtus Portfolio.",
-    highlights: ["Portfolio overview", "Help with insurance and investments"],
+      "Financial Fortress gives a client one view of an insurance and investment portfolio, and a way to ask for help with it. On Android it is published as Virtus Portfolio.",
+    highlights: ["See policies in one portfolio", "Ask for help with a policy"],
     platforms: ["Android", "iOS"],
     tools: ["React Native"],
     image: "media/fortress.jpg",
@@ -207,9 +343,9 @@ export const projects: Project[] = [
     slug: "virtus",
     name: "Salesbuilder",
     category: "Finance",
-    summary: "Sales activity tracker for the Virtus team.",
+    summary: "A log of sales activity for the Virtus advisory team.",
     story:
-      "Salesbuilder by Fortress is a sales activity tracker. Advisors log the work around a client instead of keeping it in separate notes.",
+      "Salesbuilder by Fortress is where advisors record client activity, so the work around a case stays in the app instead of in separate notes.",
     highlights: ["Track sales activity", "Built for the Virtus / Fortress team"],
     platforms: ["Android", "iOS"],
     tools: ["React Native"],
@@ -366,9 +502,13 @@ export const projects: Project[] = [
 export const categories: Array<"All" | Category> = [
   "All",
   "IoT",
+  "Retail",
+  "Rewards",
+  "Estate",
+  "Community",
+  "Survey",
   "Finance",
   "Food",
   "Property",
-  "Community",
   "Experiment",
 ];
